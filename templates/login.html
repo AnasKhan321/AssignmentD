@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        {% load static %}
+
+       <link rel="stylesheet" type="text/css" href="{% static 'css/login.css' %}">
+
+    <title> iUploader  -  Login</title>
+</head>
+<body>
+    {% comment %} Set the Background Image  {% endcomment %}
+    <div class="background-image"  style="background-image: url('{% static 'img/bg1.jpg' %}'); background-size: cover;  background-blur: blur(8px);   position: fixed;  top: 0;     left: 0;     width: 100%;
+    height: 100%;
+    z-index: -1;"></div>
+
+    <div id="message">     {% for message in messages  %} {{ message}} {% endfor %}</div>
+
+    <div class="contain">
+
+        {% comment %} Signup  Container where all the things Container  {% endcomment %}
+
+
+        <div class="login-container">
+            <h2>Login</h2>
+            <form method="POST" action="/login">
+                {% csrf_token %}
+
+                <input type="text" placeholder="Username"  name="loginusername" required>
+                <input type="password" placeholder="Password" name="loginpass" required>
+                <small class="address"> Didn't Have account ?   <a href="/signup">Signup </a> </small>
+                <button type="submit">Login</button>
+            </form>
+        </div>
+
+    </div>
+     <script>
+        setTimeout(()=>{
+            document.getElementById('message').style.display = 'none';
+
+        },3000)
+    </script>
+</body>
+</html>

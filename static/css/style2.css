@@ -1,0 +1,121 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Global styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #ebf0ff;
+}
+
+/* Header */
+header {
+    background-color: #02022b;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+header h1 {
+    color: rgb(255, 206, 115);
+    font-size: 36px;
+}
+
+/* Navigation */
+nav {
+    background-color: #000b52;
+    text-align: center;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 10px 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 20px;
+}
+
+nav ul li a {
+    color: rgb(255, 179, 37);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+#message {
+    text-align: center;
+    color: green;
+    margin: 10px 0px;
+}
+
+/* Upload Form */
+.upload-form {
+    background-color: #000b52;
+    color: rgb(250, 200, 108);
+
+    border-radius: 5px;
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 600px;
+    box-shadow: 0 0 10px rgba(100, 0, 0, 0.6);
+}
+
+.upload-form:hover {
+    box-shadow: 0 0 10px rgba(100, 0, 0, 0.9);
+
+}
+
+.upload-form h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.upload-form label {
+    font-weight: bold;
+}
+
+.upload-form input[type="file"] {
+    display: block;
+    margin: 10px 0;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.upload-form button {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: orange;
+}
+
+/* Information Section */
+.info-section {
+    text-align: center;
+    padding: 20px;
+}
+
+.info-section h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.info-section p {
+    font-size: 16px;
+    color: #555;
+}
+
+
+
+@media only screen and (max-width: 600px) {
+    .upload-form {
+        max-width: 80%;
+
+    }
+}

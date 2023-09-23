@@ -1,0 +1,83 @@
+/* Reset some default styles for better consistency */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Define global styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f3f4f6c2;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Style the sign-up form */
+.signup-form {
+    background-color: #fefefea5;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 20px rgba(9, 43, 134, 0.296);
+    text-align: center;
+    max-width: 400px;
+    width: 100%;
+}
+
+.signup-form h2 {
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.input-group {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: #555;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.signup-button {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.signup-button:hover {
+    background-color: #0056b3;
+}
+
+.terms {
+    font-size: 12px;
+    color: #777;
+    margin-top: 15px;
+}
+
+.terms a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.terms a:hover {
+    text-decoration: underline;
+}

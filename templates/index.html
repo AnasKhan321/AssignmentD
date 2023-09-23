@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static %}
+
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style2.css' %}">
+
+    <title>iUploader - Upload Your Image </title>
+    <style>
+        /* Reset some default styles */
+     
+    </style>
+</head>
+<body>
+    
+   <!-- Navigation Bar  -->
+    <header>
+        <h1>iUploader </h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="/logout">Logout </a></li>
+            <li> <a href=""> {{request.user.username}} </a></li>
+          
+        </ul>
+    </nav>
+    <div id="message">     {% for message in messages  %} {{ message}} {% endfor %}</div>
+
+
+    <!-- form where user can upload the Image  -->
+    <div class="upload-form">
+        <h2>Upload Your Image</h2>
+        <form action="/upload" method="POST" enctype="multipart/form-data">
+            {% csrf_token %}
+
+            <label for="image">Choose an image:</label>
+            <input type="file" id="image" name="image" accept="image/*" >
+            <button type="submit">Upload</button>
+        </form>
+    </div>
+    <script>
+        setTimeout(()=>{
+            document.getElementById('message').style.display = 'none';
+
+        },3000)
+    </script>
+
+</body>
+</html>

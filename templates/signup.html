@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        {% load static %}
+
+       <link rel="stylesheet" type="text/css" href="{% static 'css/login.css' %}">
+
+    <title>iUploader - Create an Account 
+    </title>
+</head>
+<body>
+    {% comment %} Set the Background Image  {% endcomment %}
+    <div class="background-image"  style="background-image: url('{% static 'img/bg1.jpg' %}'); background-size: cover;  background-blur: blur(8px);   position: fixed;  top: 0;     left: 0;     width: 100%;
+    height: 100%;
+    z-index: -1;"></div>
+
+    <div id="message">     {% for message in messages  %} {{ message}} {% endfor %}</div>
+
+    <div class="contain">
+
+        {% comment %} Login Container where all the things Container  {% endcomment %}
+        <div class="login-container">
+            <h2>Sign Up Now </h2>
+            <form method="POST" action="/signup">
+                {% csrf_token %}
+                <input type="text" placeholder="Username" name="username"  required >
+                <input type="text" placeholder="First Name "  name="fname"  required>
+                <input type="text" placeholder=" Last Name " name="lname"  required>
+                <input type="email" placeholder="Email " name="email"  required>
+                <input type="password" placeholder="Password" name="pass1" required>
+                <small class="address"> Already Have account ?   <a href="/login">Login </a> </small>
+
+                <button type="submit">Sign Up</button>
+
+            </form>
+        </div>
+
+    </div>
+
+ <script>
+        setTimeout(()=>{
+            document.getElementById('message').style.display = 'none';
+
+        },3000)
+    </script>
+    
+</body>
+</html>
+
